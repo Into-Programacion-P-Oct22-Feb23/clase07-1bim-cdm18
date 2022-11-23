@@ -5,24 +5,36 @@
  */
 package ejemplociclowhile;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
  */
 public class Ejemplo02 {
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        int limite = 10;
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        int limite;
         int contador = 1;
-          
-        while (contador <= limite){
+
+        System.out.println("Cual es el limite");
+        limite = entrada.nextInt();
+
+        while (contador <= limite) {
             System.out.printf("Contador %d\n", contador);
-            
+            contador++;
         }
-        
+        // default(){
+        System.out.println("Numero invalido");
+
     }
+
 }
+

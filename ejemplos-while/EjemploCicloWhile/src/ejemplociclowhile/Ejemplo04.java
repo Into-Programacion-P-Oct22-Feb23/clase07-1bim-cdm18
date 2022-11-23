@@ -32,5 +32,5 @@ public class Ejemplo04 {
         
         System.out.printf("La suma final es %d\n", suma);
         
-    }
+    } 
 }

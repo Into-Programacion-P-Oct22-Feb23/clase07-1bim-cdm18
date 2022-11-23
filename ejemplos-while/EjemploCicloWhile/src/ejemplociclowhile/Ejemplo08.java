@@ -33,13 +33,15 @@ public class Ejemplo08 {
         while (bandera) {
             System.out.println("Ingrese calificación:");
             calificacion = entrada.nextDouble();
-            suma_total = suma_total + calificacion;
+            suma_total = suma_total + calificacion; // seria el mensaje que se guarda
             contador = contador + 1;
 
             entrada.nextLine(); // Ojo usamos el limpiador del scanner (buffer)
+            // se usa para pasar de datos numericos a cadenas
 
             // proceso para salir del ciclo.
             System.out.println("Ingrese si para salir");
+         // aqui se crea el temporal al mismo tiempo de guardarla en teclado 
             String temporal = entrada.nextLine();
             if (temporal.equals("si")) {
                 bandera = false;

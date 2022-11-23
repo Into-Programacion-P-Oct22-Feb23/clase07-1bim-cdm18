@@ -10,9 +10,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author reroes
+ * @author cdm18
  */
-public class Ejemplo09 {
+public class Ejemplo101 {
     /**
      * @param args the command line arguments
      */
@@ -20,27 +20,32 @@ public class Ejemplo09 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int limite_tabla = 12;
+        int limite_tabla;
         int contador = 1;
         int operacion;
         int tabla;
         
-        System.out.println("Ingrese el número de tabla a generar"); 
-        tabla = entrada.nextInt(); // 3
+        System.out.println("Ingrese el número de tabla a generar");
+        tabla = entrada.nextInt();
+        
+        System.out.println("Ingrese el limite de tabla a generar");
+        limite_tabla = entrada.nextInt();
         
         String cadena = ""; // cadena acumulador
-        System.out.printf("%sTabla de multiplicar\n", cadena);
+        cadena = String.format("%sTabla de multiplicar\n", cadena);
         
-        while (contador <= limite_tabla){ // 1<=12 verdadero
-            operacion = tabla * contador; // operacion = 3*1 = 3
+        while (contador <= limite_tabla){
+            operacion = tabla * contador;
             
-            System.out.printf("%s%d*%d = %d\n", // ""3*1=3\n === > 3*1=3
+            cadena = String.format("%s%d*%d=%d\n", 
                     cadena, 
                     tabla, 
                     contador,
                     operacion);
             contador = contador + 1;
         }
+                
+        System.out.printf("%s\n", cadena);
         
     }
 }

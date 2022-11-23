@@ -6,12 +6,12 @@
 package ejemplociclowhile;
 
 import java.util.Scanner;
-
+import java.util.Locale;
 /**
  *
  * @author reroes
  */
-public class Ejemplo03 {
+public class Ejemplo031 {
 
     /**
      * @param args the command line arguments
@@ -19,20 +19,26 @@ public class Ejemplo03 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
         int limite = 5;
         int contador = 1;
-        int suma = 0;
-        int valor_ingresado;
+        double suma = 0;
+        double valor_ingresado;
+        double promedio;
+        
 
         while (contador <= limite) {
             System.out.println("Ingrese el valor a sumar");
-            valor_ingresado = entrada.nextInt();
+            valor_ingresado = entrada.nextDouble();
             suma = suma + valor_ingresado;
-            System.out.printf("Valor ingresado %d\n", valor_ingresado);
+           // System.out.printf("Valor ingresado %d\n", valor_ingresado);
             contador = contador + 1;
         }
+       
+        System.out.printf("La suma final es %.2f\n", suma);
+        promedio = suma/limite;
+        System.out.printf("El promedio final es %.2f\n", promedio);
 
-        System.out.printf("La suma final es %d\n", suma);
 
     }
 }
